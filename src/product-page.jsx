@@ -2,10 +2,9 @@ import React from "react";
 import Title from "./title";
 import Code from "./code";
 import Gallery from "./gallery";
-import Price from "./price";
-import OldPrice from "./old-price";
 import Counter from "./counter";
 import Description from "./description";
+import FullPrice from "./full-price";
 
 function ProductPage({ product }) {
   return (
@@ -16,8 +15,8 @@ function ProductPage({ product }) {
         <Gallery src={product.src} alt={product.name} />
         <div>
           <p>
-            Цена: <OldPrice value={product.oldPrice} />{" "}
-            <Price value={product.price} />
+            Цена:{" "}
+            <FullPrice oldprice={product.oldPrice} price={product.price} />
           </p>
           <div>
             Количество: <Counter />
