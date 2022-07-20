@@ -5,6 +5,7 @@ import Gallery from "./gallery";
 import Counter from "./counter";
 import Description from "./description";
 import FullPrice from "./full-price";
+import Comments from "./comments";
 
 function ProductPage({ product }) {
   return (
@@ -28,6 +29,7 @@ function ProductPage({ product }) {
         </div>
       </div>
       <Description text={product.description} />
+      <Comments comments={product.comments} />
     </section>
   );
 }
